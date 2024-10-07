@@ -9,8 +9,7 @@ const CustomModal = ({isModalVisible, onPressBackDrop, children}: any) => {
       animationOut={'fadeOut'}
       isVisible={isModalVisible}
       onBackdropPress={onPressBackDrop}
-      statusBarTranslucent={true}
-      avoidKeyboard={true}>
+      statusBarTranslucent={true}>
       <KeyboardAvoidingView>{children}</KeyboardAvoidingView>
     </Modal>
   );

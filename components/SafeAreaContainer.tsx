@@ -8,6 +8,7 @@ import {
   View,
 } from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import colors from '../assets/colors';
 
 const isAndroid: boolean = Platform.OS === 'android';
 const fontScale = (fontSize: number) =>
@@ -31,11 +32,11 @@ const SafeAreaContainer: React.FC<SafeAreaContainerProps> = ({
       <StatusBar barStyle="light-content" hidden={true} />
       <View
         style={{
-          backgroundColor: '#0eb6ac',
-          paddingTop: isAndroid ? insets.top + 50 : insets.top + 20,
-          paddingBottom: isAndroid ? 30 : insets.bottom,
-        }}>
-        <Text style={styles.screenHeading}>Tasks Todo</Text>
+          backgroundColor: colors.primary,
+          paddingTop: isAndroid ? insets.top + 25 : insets.top + 10,
+          paddingBottom: isAndroid ? 25 : insets.bottom - 15,
+        }}> 
+        <Text style={styles.screenHeading}>Todo List</Text>
       </View>
 
       <View style={[styles.container]}>{children}</View>
@@ -52,7 +53,6 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#141514',
   },
   title: {
     fontSize: fontScale(28),
