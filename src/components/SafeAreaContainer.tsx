@@ -30,15 +30,6 @@ const SafeAreaContainer: React.FC<SafeAreaContainerProps> = ({
   return (
     <View style={[styles.container]}>
       <StatusBar barStyle="light-content" hidden={true} />
-      <View
-        style={{
-          backgroundColor: colors.primary,
-          paddingTop: isAndroid ? insets.top + 25 : insets.top + 10,
-          paddingBottom: isAndroid ? 25 : insets.bottom - 15,
-        }}> 
-        <Text style={styles.screenHeading}>Todo List</Text>
-      </View>
-
       <View style={[styles.container]}>{children}</View>
     </View>
   );
@@ -53,6 +44,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    backgroundColor: '#f5f5f5',
   },
   title: {
     fontSize: fontScale(28),

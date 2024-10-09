@@ -1,0 +1,16 @@
+export default {
+  primary: '#007bff',
+  secondary: '#90caf9',
+  tertiary: '#e3f2fd',
+  lightblue: '#1565c0',
+  dark: '#222',
+  danger: '#dc3545',
+  success: '#00FF00',
+  warning: '#FFFF00',
+  info: '#0000FF',
+  seriousWarning: '#FFA500',
+  royalty: '#800080',
+  white: '#FFFFFF',
+  grey: '#808080',
+  lightgrey: '#dddddd',
+};
