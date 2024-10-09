@@ -96,7 +96,7 @@ const TaskSave = ({route, navigation}) => {
           <View style={[styles.formControl, styles.description]}>
             <Text style={styles.label}>Description</Text>
             <TextInput
-            textAlignVertical='top'
+              textAlignVertical="top"
               onChangeText={txt =>
                 setFormData(prevData => ({...prevData, description: txt}))
               }
@@ -121,7 +121,7 @@ const TaskSave = ({route, navigation}) => {
                 setOpen(true);
               }}
               style={styles.input}>
-              <Text>{formatDate || 'e.g 10 Jan 2020'}</Text>
+              <Text style={{color : colors.dark}}>{formatDate || 'e.g 10 Jan 2020'}</Text>
             </TouchableOpacity>
             <DatePicker
               title={'Task Date'}
@@ -184,6 +184,7 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     height: '100%',
     width: '100%',
+    color: colors.dark,
     borderColor: '#ccc',
     padding: 10,
     fontSize: 18,
